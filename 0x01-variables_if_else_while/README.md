@@ -41,11 +41,11 @@ julien@ubuntu:~/0x01$
 * The variable n will store a different value every time you will run this program
 
 * The output of the program should be:
-i. The number, followed by
-. if the number is greater than 0: is positive
-. if the number is 0: is zero
-. if the number is less than 0: is negative
-ii. followed by a new line
+[i] The number, followed by
+[.] if the number is greater than 0: is positive
+[.] if the number is 0: is zero
+[.] if the number is less than 0: is negative
+[ii] followed by a new line
 
 ## 1. The last digit
 
