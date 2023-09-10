@@ -14,9 +14,9 @@ It begins with basics and the wades into more complex and advanced C programming
 * All the code uses Betty style. It will be checked using betty-style.pl and betty-doc.pl
 * Run Betty linter against all the files with command:
 
-            ```shell
-            betty <filename>
-            ```
+```shell
+betty <filename>
+```
 
 ## ABOUT BETTY LINTER
 
