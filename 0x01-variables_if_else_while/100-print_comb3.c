@@ -9,9 +9,12 @@
 
 int main(void)
 {
-	for (int i = 0; i < 9; i++)
+	int i;
+	int y;
+
+	for (i = 0; i < 9; i++)
 	{
-		for (int y = i + 1; y <= 9; y++)
+		for (y = i + 1; y <= 9; y++)
 		{
 			putchar((i % 10) + '0');
 			putchar((y % 10) + '0');
