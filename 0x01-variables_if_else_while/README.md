@@ -224,4 +224,4 @@ You are not allowed to use any variable of type char
 
 @Adioz
 
-**coded with lots of love to my darling ~ Eentrine**
+**coded with lots of love to my darling ~ Centrine**
