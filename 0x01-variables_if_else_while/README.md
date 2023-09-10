@@ -41,11 +41,11 @@ julien@ubuntu:~/0x01$
 * The variable n will store a different value every time you will run this program
 
 * The output of the program should be:
-  _ The number, followed by
+  * The number, followed by
   * if the number is greater than 0: is positive
   * if the number is 0: is zero
   * if the number is less than 0: is negative
-  _ followed by a new line
+  * followed by a new line
 
 ## 1. The last digit
 
@@ -221,3 +221,7 @@ You are not allowed to use any variable of type char
 * There are no external function calls. All the code is in the main function
 * putchar is not used more than eight times in this code
 * there is no variable of type char
+
+@Adioz
+
+**coded with lots of love to my darling ~ Eentrine**
