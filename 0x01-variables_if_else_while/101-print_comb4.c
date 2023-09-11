@@ -2,7 +2,7 @@
 
 /**
  * main - prints all possible different combinations
- * of three digit numbers
+ * of three digit numbers in the program
  *
  * Return: 0 on success
  */
