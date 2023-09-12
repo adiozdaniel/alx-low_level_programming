@@ -1,8 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
+#include <stdio.h>
 
 /**
- * putchar - wries a character to stdout
+ * _putchar - wries a character to stdout
  * print_alphabet - prints _putchar, followed by a new line.
  * prints the alphabet, in lowercase, followed by a new line.
  * print_alphabet_x10 - 10 times the alphabet, in lowercase
@@ -18,7 +19,7 @@
  * print_times_table - prints the n times table, starting with 0.
  */
 
-int putchar(void);
+int _putchar(char c);
 void print_alphabet(void);
 void print_alphabet_x10(void);
 int _islower(int c);
