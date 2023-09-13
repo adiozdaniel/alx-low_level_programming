@@ -7,10 +7,16 @@
 
 int main(void)
 {
-	int i;
+	int a, b, c;
+	int largest;
 
-	i = 0;
-	positive_or_negative(i);
+	a = -98;
+	b = -972;
+	c = 0;
+
+	largest = largest_number(a, b, c);
+
+	printf("%d is the largest number\n", largest);
 
 	return (0);
 }
