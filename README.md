@@ -58,4 +58,4 @@ betty <filename>
 
 Feel free to contribute and improve or even ask questions.
 
-@Eng. ~/Adioz
+@Eng. Adioz 👻
