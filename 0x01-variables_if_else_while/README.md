@@ -222,6 +222,5 @@ You are not allowed to use any variable of type char
 * putchar is not used more than eight times in this code
 * there is no variable of type char
 
-@Adioz
-
 **coded with lots of love to my darling ~ Centrine**
+@Eng. Adioz 👻

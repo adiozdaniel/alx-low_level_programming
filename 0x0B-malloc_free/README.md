@@ -78,4 +78,5 @@ Note that we will compile with your ```C alloc_grid.c``` file. Make sure it comp
 * Returns ```C NULL``` if ```C str == NULL``` or ```C str == ""```
 * If your function fails, it should return ```C NULL```
 
+**coded with lots of love to my darling ~ Centrine**
 @Eng. Adioz 👻

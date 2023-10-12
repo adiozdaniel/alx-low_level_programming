@@ -32,7 +32,8 @@ char *_strstr(char *haystack, char *needle);
 Test the program with the following commands:
 
 1. ```B ar -t libmy.a```
-    * Expected output:
+
+* Expected output:
 
 ```B
 
@@ -60,7 +61,7 @@ Test the program with the following commands:
 
 2.```B nm libmy.a```
 
-    * Expected output
+* Expected output
 
 ```B
 0-isupper.o:
@@ -128,36 +129,37 @@ _putchar.o:
 
 * Finally, compile (with: ```B gcc -std=gnu89 main.c -L. -lmy -o quote```) and run
 
-    * Expected output:
+  * Expected output:
 
-```B "At the end of the day, my goal was to be the best hacker"
-    - Kevin Mitnick```
+```B
+"At the end of the day, my goal was to be the best hacker"
+    - Kevin Mitnick
+```
 
 ## 1. Without libraries what have we? We have no past and no future
 
-* This is a script called ```B create_static_lib.sh``` that creates a static library called ```B liball.a``` from all the ```C .c ``` files that are in the current directory.
+* This is a script called ```B create_static_lib.sh``` that creates a static library called ```B liball.a``` from all the ```C .c``` files that are in the current directory.
 
 * List all the c files currently in our directory: ```B ls *.c```
-
 * Expected output:
 
 ```B
 main.c  _putchar.c
 ```
 
-* Use the script to create the required ```B liball.a``` file by running: ```B ./create_static_lib.sh ```
-
+* Use the script to create the required ```B liball.a``` file by running: ```B ./create_static_lib.sh```
 **Do not expect an output**
 
 * In case there is any output, then there is an error in the way you implemented this code. Take time to check again that it corresponds my code.
-
 * List all the files with ```B .a``` extension.
-
 * Expected output is: ```B liball.a```
-
 * Now, we can use out ```B liball.a``` file to generate the output files: ```B ar -t liball.a```
-
 * Expected output:
 
-```B main.o
-_putchar.o```
+```B
+main.o
+_putchar.o
+```
+
+**coded with lots of love to my darling ~ Centrine**
+@Eng. Adioz 👻

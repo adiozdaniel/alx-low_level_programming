@@ -146,4 +146,5 @@ julien@ubuntu:~/0x0c. macro, structures$ ./e
 julien@ubuntu:~/0x0c. macro, structures$ 
 ```
 
+**coded with lots of love to my darling ~ Centrine**
 @Eng. Adioz 👻

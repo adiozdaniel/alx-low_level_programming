@@ -82,3 +82,6 @@ This directory contains the most basic beginner friendly C implementation
 * The program does not use any functions listed in the NAME section of the man (3) printf or man (3) puts
 * The program returns 1
 * The program compiles without any warnings when using the -Wall gcc option
+
+**coded with lots of love to my darling ~ Centrine**
+@Eng. Adioz 👻

@@ -368,4 +368,5 @@ julien@ubuntu:~/0x0e. Function pointers$
 * **Note 0:** ```C je``` is equivalent to ```C jz```
 * **Note 1:** depending on how you write your ```C main``` function, and on which machine you compile your program, the opcodes (and by extension the assembly code) might be different than the above example
 
+**coded with lots of love to my darling ~ Centrine**
 @Eng. Adioz 👻

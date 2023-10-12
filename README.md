@@ -58,4 +58,5 @@ betty <filename>
 
 Feel free to contribute and improve or even ask questions.
 
+**coded with lots of love to my darling ~ Centrine**
 @Eng. Adioz 👻
