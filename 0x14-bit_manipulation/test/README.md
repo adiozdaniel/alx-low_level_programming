@@ -1,6 +1,6 @@
 # 0x14. C - Bit manipulation
 
-![plot](./test/bitwise.png)
+![plot](./bitwise.png)
 
 ## TESTING DOCUMENTATION
 
