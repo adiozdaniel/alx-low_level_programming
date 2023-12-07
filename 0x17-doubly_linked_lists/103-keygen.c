@@ -1,50 +1,120 @@
 #include <stdio.h>
-#include <string.h>
-
-#define PASSWORD_LENGTH 20
+#include <stdlib.h>
+#include <time.h>
 
 /**
-* generate_key - Generates a valid key for the given username.
-*
-* @username: The username for which the key needs to be generated.
-* @key: Pointer to the buffer to store the generated key.
-*/
-static void generate_key(const char *username, char *key)
+ * find_biggest - finds the biggest number
+ * @usrn: username
+ * @len: length of username
+ * Return: returns the biggest number
+ */
+int find_biggest(char *usrn, int len)
 {
-	/* Example key generation logic: Concatenate username with a secret string */
-	const char *secret = "julien";
+	int ch;
+	int vch;
+	unsigned int rand_num;
 
-	strcpy(key, username);
-	strcat(key, "_");
-	strcat(key, secret);
+	ch = *usrn;
+	vch = 0;
+
+	while (vch < len)
+	{
+		if (ch < usrn[vch])
+			ch = usrn[vch];
+		vch += 1;
+	}
+
+	srand(ch ^ 14);
+	rand_num = rand();
+
+	return (rand_num & 63);
 }
 
 /**
-* main - Main function for the key generation.
-* @argc: Number of arguments
-* @argv: Array of
-* Return: 0 upon successful completion.
-*/
-int main(int argc, char *argv[])
+ * _multiply - multiplies each char of username
+ *
+ * @usrn: username
+ * @len: length of username
+ * Return: returns the multiplied char
+ */
+int _multiply(char *usrn, int len)
 {
-	const char *username;
+	int ch;
+	int vch;
 
-	if (argc != 2)
+	ch = vch = 0;
+	while (vch < len)
 	{
-		fprintf(stderr, "Usage: %s <username>\n", argv[0]);
-		return (1);
+		ch = ch + usrn[vch] * usrn[vch];
+		vch += 1;
 	}
 
-	username = argv[1];
+	return (((unsigned int)ch ^ 239) & 63);
+}
 
+/**
+ * _random - generates a random char
+ * @usrn: username
+ * Return: returns a random char
+ */
+int _random(char *usrn)
+{
+	int ch;
+	int vch;
+
+	ch = vch = 0;
+	while (vch < *usrn)
 	{
-		char key[PASSWORD_LENGTH + 1];
-
-		generate_key(username, key);
-
-		/* Print the generated key */
-		printf("%s\n", key);
+		ch = rand();
+		vch += 1;
 	}
+
+	return (((unsigned int)ch ^ 229) & 63);
+}
+
+/**
+ * main - Entry point
+ * @argc: arguments count
+ * @argv: arguments vector
+ * Return: Always 0
+ */
+int main(int argc, char **argv)
+{
+	char keygen[7];
+	int len, ch, vch;
+	long alph[] = {
+		0x3877445248432d41, 0x42394530534e6c37, 0x4d6e706762695432,
+		0x74767a5835737956, 0x2b554c59634a474f, 0x71786636576a6d34,
+		0x723161513346655a, 0x6b756f494b646850 };
+	(void) argc;
+
+	for (len = 0; argv[1][len]; len++)
+		;
+
+	keygen[0] = ((char *)alph)[(len ^ 59) & 63];
+	ch = vch = 0;
+	while (vch < len)
+	{
+		ch = ch + argv[1][vch];
+		vch = vch + 1;
+	}
+
+	keygen[1] = ((char *)alph)[(ch ^ 79) & 63];
+	ch = 1;
+	vch = 0;
+	while (vch < len)
+	{
+		ch = argv[1][vch] * ch;
+		vch = vch + 1;
+	}
+	keygen[2] = ((char *)alph)[(ch ^ 85) & 63];
+	keygen[3] = ((char *)alph)[find_biggest(argv[1], len)];
+	keygen[4] = ((char *)alph)[_multiply(argv[1], len)];
+	keygen[5] = ((char *)alph)[_random(argv[1])];
+	keygen[6] = '\0';
+
+	for (ch = 0; keygen[ch]; ch++)
+		printf("%c", keygen[ch]);
 
 	return (0);
 }

@@ -184,7 +184,7 @@ sum = 1534
 
 #### Tested by: [8-main.c](8-main.c)
 
-* Compiling: ```gcc -Wall -pedantic -Werror -Wextra -std=gnu89 8-main.c 3-add_dnodeint_end.c 0-print_dlistint.c 4-free_dlistint.c 8-delete_dnodeint.c -o k```
+* Compiling: ```gcc -Wall -pedantic -Werror -Wextra -std=gnu89 8-main.c ../3-add_dnodeint_end.c ../0-print_dlistint.c ../4-free_dlistint.c ../8-delete_dnodeint.c -o k```
 * Running: ```./k```
 * **Expected result:**
 
