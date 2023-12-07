@@ -2,17 +2,16 @@
 #include <stdlib.h>
 
 /**
- * delete_dnodeint_at_index - delete node at give index
+ * delete_dnodeint_at_index - delete node at given index
  * @head:list
  * @index:given index
- * Return: -1 or 0
+ * Return: -1 or zero
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
 	dlistint_t *start;
 	unsigned int i;
 	unsigned int len;
-
 	len = len_node(&head);
 
 	start = *head;
@@ -46,8 +45,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 }
 
 /**
- * len_node - list len
- *
+ * len_node - list the len
  * @node:list
  * Return:unsigned int
  */
