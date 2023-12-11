@@ -70,7 +70,7 @@ char *_strstr(char *haystack, char *needle);
 #### To create it
 
 Run the following command:
-```gcc -Wall -Werror -Wextra -pedantic -std=c89 -shared -o libdynamic.so -fPIC -I/usr/local/include/python3.4m/ *.c```
+```gcc -Wall -Werror -Wextra -pedantic -std=c89 -shared -o libdynamic.so -fPIC -I/usr/local/include/python3.4m/ ./libdynamic/*.c```
 
 #### To test it
 
@@ -124,21 +124,68 @@ myna@myna-e7450:0x18-dynamic_libraries$
 
 Create a script that creates a dynamic library called ```liball.so``` from all the ```.c``` files that are in the current directory.
 
-#### To create ```libball.so```
-
-Run the following command:
-```gcc -Wall -Werror -Wextra -pedantic -std=c89 -shared -o libdynamic.so -fPIC -I/usr/local/include/python3.4m/ ./libdynamic/*.c```
-
-#### To test it
+#### Run the script
 
 Run the following commands:
 
-* ```ls -la lib*```
+* Give permission to the script: ```chmod +x 1-create_dynamic_lib.sh```
+* Check the availability of the files. Depending on where they are saved. In my case ```ls ./libdynamic/*.c```
 
   * Expected output:
 
 ```py
--rwxrwxr-x 1 myna myna 16320 Dec 11 08:35 libdynamic.so
+./libdynamic/_char_case.c
+./libdynamic/_interger.c
+./libdynamic/_locaters.c
+./libdynamic/_memory.c
+./libdynamic/_printer.c
+./libdynamic/_string.c
 ```
+
+* Run the script inside the directory
+* check the output ```nm -D --defined-only liball.so```
+
+### 2. Let's call C functions from Python
+
+I know, you’re missing C when coding in Python. So let’s fix that!
+
+🤔 Really, who lied you?
+
+Create a dynamic library that contains C functions that can be called from Python.
+
+[see implementation](test/README.md)
+
+### 3. Code injection: Win the Giga Millions!
+
+![tumbler](css/tumblr_mlzp3qgHss1s5xo13o3_r1_1280.jpg)
+I bought a ticket for the Giga Millions and chose these numbers: 9, 8, 10, 24, 75 + 9. If you could run two commands on the same server where the Giga Millions program runs, could you make me win the Jackpot?
+
+* Our mole got us a copy of the program, you can download it [here](https://github.com/alx-tools/0x18.c). Our mole also gave us a piece of documentation:
+
+```py
+/* Giga Millions program
+  * Players may pick six numbers from two separate pools of numbers:
+  * - five different numbers from 1 to 75 and
+  * - one number from 1 to 15
+  * You win the jackpot by matching all six winning numbers in a drawing.
+  * Your chances to win the jackpot is 1 in 258,890,850
+  *
+  * usage: ./gm n1 n2 n3 n4 n5 bonus
+```
+
+* You can’t modify the program ```gm``` itself as Master Sysadmin Sylvain (MSS) always checks its ```MD5``` before running it
+* The system is an ```Linux Ubuntu 16.04```
+* The server has internet access
+* Our mole will be only able to run two commands from a shell script, without being detected by MSS
+* Your shell script should be maximum 3 lines long. You are not allowed to use ```;```, ```&&```, ```||```, ```|```, ` (it would be detected by MSS), and have a maximum of two commands
+* Our mole has only the authorization to upload one file on the server. It will be your shell script
+* Our mole will run your shell script this way: ```mss@gm_server$ . ./101-make_me_win.sh```
+* Our mole will run your shell script from the same directory containing the program ```gm```, exactly 98 seconds before MSS runs ```gm``` with my numbers: ./```gm 9 8 10 24 75 9```
+* MSS will use the same terminal and session than our mole
+* Before running the ```gm``` program, MSS always check the content of the directory
+* MSS always exit after running the program ```gm```
+* TL;DR; This is what is going to happen
+
+**Tip:** ```LD_PRELOAD```
 
 ![greeting](../files/greeting.svg)
