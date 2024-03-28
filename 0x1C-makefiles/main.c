@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	print_school();
+	school();
 	return (EXIT_SUCCESS);
 }
 /* Adioz */
