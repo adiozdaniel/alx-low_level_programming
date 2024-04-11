@@ -61,7 +61,7 @@ You will be asked to write files containing big O notations. Please use this for
 
 ### 0. Linear search (mandatory)
 
-Write a function that searches for a value in an array of integers using the Linear search algorithm
+Write a function that searches for a value in an array of integers using the [Linear search algorithm](https://intranet.alxswe.com/rltoken/17RKhbmvh_u4ebCwaSxCxg)
 
 - Prototype : `int linear_search(int *array, size_t size, int value);`
 - Where `array` is a pointer to the first element of the array to search in
@@ -128,7 +128,7 @@ Found 999 at index: -1
 
 ### 1. Binary search (mandatory)
 
-Write a function that searches for a value in a sorted array of integers using the Binary search algorithm
+Write a function that searches for a value in a sorted array of integers using the [Binary search algorithm](https://intranet.alxswe.com/rltoken/SnveFJhSDE7o8bEx-kGGpA)
 
 - Prototype : `int binary_search(int \*array, size_t size, int value);`
 - Where `array` is a pointer to the first element of the array to search in
@@ -255,20 +255,22 @@ int **map;
 - Directory: `0x1E-search_algorithms`
 - File: `6-O`
 
-7. Jump search
-   #advanced
-   Write a function that searches for a value in a sorted array of integers using the Jump search algorithm
+### 7. Jump search (#advanced)
 
-Prototype : int jump_search(int \*array, size_t size, int value);
-Where array is a pointer to the first element of the array to search in
-size is the number of elements in array
-And value is the value to search for
-Your function must return the first index where value is located
-You can assume that array will be sorted in ascending order
-If value is not present in array or if array is NULL, your function must return -1
-You have to use the square root of the size of the array as the jump step.
-You can use the sqrt() function included in <math.h> (don’t forget to compile with -lm)
-Every time you compare a value in the array to the value you are searching for, you have to print this value (see example)
+Write a function that searches for a value in a sorted array of integers using the [Jump search algorithm](https://intranet.alxswe.com/rltoken/1Op40kSYMN23JsOu6F3P1A)
+
+- Prototype : int jump_search(int \*array, size_t size, int value);
+- Where array is a pointer to the first element of the array to search in
+- size is the number of elements in array
+- And value is the value to search for
+- Your function must return the first index where value is located
+- You can assume that array will be sorted in ascending order
+- If value is not present in array or if array is NULL, your function must return -1
+- You have to use the square root of the size of the array as the jump step.
+- You can use the sqrt() function included in <math.h> (don’t forget to compile with -lm)
+- Every time you compare a value in the array to the value you are searching for, you have to print this value (see example)
+
+```Bash
 wilfried@0x1E-search_algorithms$ cat 100-main.c
 #include <stdio.h>
 #include <stdlib.h>
@@ -317,36 +319,39 @@ Value checked array[9] = [9]
 Value found between indexes [9] and [12]
 Value checked array[9] = [9]
 Found 999 at index: -1
+```
 
 **Repo:**
 
 - GitHub repository: `alx-low_level_programming`
 - Directory: `0x1E-search_algorithms`
-- File: `100-jump.c
+- File: `100-jump.c`
 
-8. Big O #5
-   #advanced
-   What is the time complexity (average case) of a jump search in an array of size n, using step = sqrt(n)?
+### 8. Big O #5 (#advanced)
+
+What is the `time complexity` (average case) of a jump search in an array of size `n`, using `step = sqrt(n)`?
 
 **Repo:**
 
 - GitHub repository: `alx-low_level_programming`
 - Directory: `0x1E-search_algorithms`
-- File: `101-O
+- File: `101-O`
 
-9. Interpolation search
-   #advanced
-   Write a function that searches for a value in a sorted array of integers using the Interpolation search algorithm
+### 9. Interpolation search (#advanced)
 
-Prototype : int interpolation*search(int \_array, size_t size, int value);
-Where array is a pointer to the first element of the array to search in
-size is the number of elements in array
-And value is the value to search for
-Your function must return the first index where value is located
-You can assume that array will be sorted in ascending order
-If value is not present in array or if array is NULL, your function must return -1
-To determine the probe position, you can use : size_t pos = low + (((double)(high - low) / (array[high] - array[low])) * (value - array[low]))
-Every time you compare a value in the array to the value you are searching, you have to print this value (see example below)
+Write a function that searches for a value in a sorted array of integers using the [Interpolation search algorithm](https://intranet.alxswe.com/rltoken/cswpABHiyyRmGrPkzsMTyw)
+
+- Prototype : `int interpolation*search(int \_array, size_t size, int value);`
+- Where `array` is a pointer to the first element of the array to search in
+- `size` is the number of elements in `array`
+- And `value` is the value to search for
+- Your function must return the first index where `value` is located
+- You can assume that `array` will be sorted in ascending order
+- If `value` is not present in `array` or if `array` is `NULL`, your function must return `-1`
+- To determine the probe position, you can use : `size_t pos = low + (((double)(high - low) / (array[high] - array[low])) * (value - array[low]))`
+- Every time you compare a value in the array to the value you are searching, you have to print this value (see example below)
+
+```Bash
 wilfried@0x1E-search_algorithms$ cat 102-main.c
 #include <stdio.h>
 #include <stdlib.h>
@@ -382,27 +387,31 @@ Found 7 at index: 14
 
 Value checked array[2109] is out of range
 Found 999 at index: -1
+```
+
 **Repo:**
 
 - GitHub repository: `alx-low_level_programming`
 - Directory: `0x1E-search_algorithms`
-- File: `102-interpolation.c
+- File: `102-interpolation.c`
 
-10. Exponential search
-    #advanced
-    Write a function that searches for a value in a sorted array of integers using the Exponential search algorithm
+### 10. Exponential search (#advanced)
 
-Prototype : int exponential_search(int \*array, size_t size, int value);
-Where array is a pointer to the first element of the array to search in
-size is the number of elements in array
-And value is the value to search for
-Your function must return the first index where value is located
-You can assume that array will be sorted in ascending order
-If value is not present in array or if array is NULL, your function must return -1
-You have to use powers of 2 as exponential ranges to search in your array
-Every time you compare a value in the array to the value you are searching for, you have to print this value (See example)
-Once you’ve found the good range, you need to use a binary search:
-Every time you split the array, you have to print the new array (or subarray) you’re searching in (See example)
+Write a function that searches for a value in a sorted array of integers using the [Exponential search algorithm](https://intranet.alxswe.com/rltoken/J7wng_ddosamvEkFl0ekqA)
+
+- Prototype : `int exponential_search(int \*array, size_t size, int value);`
+- Where `array` is a pointer to the first element of the array to search in
+- `size` is the number of elements in `array`
+- And `value` is the value to search for
+- Your function must return the first index where `value` is located
+- You can assume that `array` will be sorted in ascending order
+- If `value` is not present in `array` or if `array` is `NULL`, your function must return `-1`
+- You have to use powers of 2 as exponential ranges to search in your array
+- Every time you compare a value in the array to the value you are searching for, you have to print this value (See example)
+- Once you’ve found the good range, you need to use a binary search:
+- Every time you split the array, you have to print the new array (or subarray) you’re searching in (See example)
+
+```Bash
 wilfried@0x1E-search_algorithms$ cat 103-main.c
 #include <stdio.h>
 #include <stdlib.h>
@@ -454,27 +463,31 @@ Searching in array: 61, 62, 76, 99
 Searching in array: 76, 99
 Searching in array: 99
 Found 999 at index: -1
+```
+
 **Repo:**
 
 - GitHub repository: `alx-low_level_programming`
 - Directory: `0x1E-search_algorithms`
-- File: `103-exponential.c
+- File: `103-exponential.c`
 
-11. Advanced binary search
-    #advanced
-    You may have noticed that the basic binary search does not necessarily return the index of the first value in the array (if this value appears more than once in the array). In this exercise, you’ll have to solve this problem.
+### 11. Advanced binary search (#advanced)
+
+You may have noticed that the basic binary search does not necessarily return the index of the first value in the array (if this value appears more than once in the array). In this exercise, you’ll have to solve this problem.
 
 Write a function that searches for a value in a sorted array of integers.
 
-Prototype : int advanced_binary(int \*array, size_t size, int value);
-Where array is a pointer to the first element of the array to search in
-size is the number of elements in array
-And value is the value to search for
-Your function must return the index where value is located
-You can assume that array will be sorted in ascending order
-If value is not present in array or if array is NULL, your function must return -1
-Every time you split the array, you have to print the new array (or subarray) you’re searching in (See example)
-You have to use recursion. You may only use one loop (while, for, do while, etc.) in order to print the array
+- Prototype : int advanced_binary(int \*array, size_t size, int value);
+- Where array is a pointer to the first element of the array to search in
+- size is the number of elements in array
+- And value is the value to search for
+- Your function must return the index where value is located
+- You can assume that array will be sorted in ascending order
+- If value is not present in array or if array is NULL, your function must return -1
+- Every time you split the array, you have to print the new array (or subarray) you’re searching in (See example)
+- You have to use recursion. You may only use one loop (while, for, do while, etc.) in order to print the array
+
+```Bash
 wilfried@0x1E-search_algorithms$ cat 104-main.c
 #include <stdio.h>
 #include <stdlib.h>
@@ -516,18 +529,21 @@ Searching in array: 6, 6, 7, 8, 9
 Searching in array: 8, 9
 Searching in array: 9
 Found 999 at index: -1
+```
+
 **Repo:**
 
 - GitHub repository: `alx-low_level_programming`
 - Directory: `0x1E-search_algorithms`
-- File: `104-advanced_binary.c
+- File: `104-advanced_binary.c`
 
-12. Jump search in a singly linked list
-    #advanced
-    You might think that linear search is not as effective as any other algorithm, right? Well, we should see what happens with a singly linked list.
+### 12. Jump search in a singly linked list (#advanced)
 
-Please define the following data structure in your search_algos.h header file:
+You might think that linear search is not as effective as any other algorithm, right? Well, we should see what happens with a singly linked list.
 
+Please define the following data structure in your `search_algos.h` header file:
+
+```C
 /\*\*
 
 - struct listint_s - singly linked list
@@ -544,20 +560,24 @@ Please define the following data structure in your search_algos.h header file:
   size_t index;
   struct listint_s *next;
   } listint_t;
-  Write a function that searches for a value in a sorted list of integers using the Jump search algorithm.
+```
 
-Prototype : listint_t *jump_list(listint_t *list, size_t size, int value);
-Where list is a pointer to the head of the list to search in
-size is the number of nodes in list
-And value is the value to search for
-Your function must return a pointer to the first node where value is located
-You can assume that list will be sorted in ascending order
-If value is not present in head or if head is NULL, your function must return NULL
-You have to use the square root of the size of the list as the jump step.
-You can use the sqrt() function included in <math.h> (don’t forget to compile with -lm)
-Every time you compare a value in the list to the value you are searching, you have to print this value (see example)
-NOTE: You can find here the functions used in the example. You don’t need to push them, we will compile your file with our own implementation during the correction.
+Write a function that searches for a value in a sorted list of integers using the Jump search algorithm.
 
+- Prototype : `listint_t *jump_list(listint_t *list, size_t size, int value);`
+- Where `list` is a pointer to the head of the list to search in
+- `size` is the number of nodes in `list`
+- And `value` is the value to search for
+- Your function must return a pointer to the first node where `value` is located
+- You can assume that `list` will be sorted in ascending order
+- If `value` is not present in `head` or if `head` is `NULL`, your function must return `NULL`
+- You have to use the square root of the size of the list as the jump step.
+- You can use the `sqrt()` function included in `<math.h>` (don’t forget to compile with -lm)
+- Every time you compare a value in the list to the value you are searching, you have to print this value (see example)
+
+NOTE: [You can find here](https://intranet.alxswe.com/rltoken/7EwC08L6K_vQyI2wknLvnQ) the functions used in the example. You don’t need to push them, we will compile your file with our own implementation during the correction.
+
+```Bash
 wilfried@0x1E-search_algorithms$ cat 105-main.c
 #include <stdio.h>
 #include <stdlib.h>
@@ -642,18 +662,21 @@ Value checked at index [13] = [62]
 Value checked at index [14] = [76]
 Value checked at index [15] = [99]
 Found 999 at index: (nil)
+```
+
 **Repo:**
 
 - GitHub repository: `alx-low_level_programming`
 - Directory: `0x1E-search_algorithms`
-- File: `105-jump_list.c
+- File: `105-jump_list.c`
 
-13. Linear search in a skip list
-    #advanced
-    As you see now, looking for a specific value in a singly linked list always leads to browse every element of the list. A common way to optimize the time complexity of a search in a singly linked list is to modify the list itself by adding an “express lane” to browse it. A linked list with an express lane is called a skip list. This change does not come without consequences. Indeed, the space complexity of a search in this kind of list will grow as sizeof(skiplist_t) > sizeof(listint_t) (see example below).
+### 13. Linear search in a skip list (#advanced)
 
-Please define the following data structure in your search_algos.h header file:
+As you see now, looking for a specific value in a singly linked list always leads to browse every element of the list. A common way to optimize the time complexity of a search in a singly linked list is to modify the list itself by adding an “express lane” to browse it. A linked list with an express lane is called a [skip list](https://intranet.alxswe.com/rltoken/SD8K3P6iYfmYTq39XZzo_Q). This change does not come without consequences. Indeed, the space complexity of a search in this kind of list will grow as `sizeof(skiplist_t) > sizeof(listint_t)` (see example below).
 
+Please define the following data structure in your `search_algos.h` header file:
+
+```C
 /\*\*
 
 - struct skiplist_s - Singly linked list with an express lane
@@ -672,18 +695,22 @@ Please define the following data structure in your search_algos.h header file:
   struct skiplist_s *next;
   struct skiplist_s \*express;
   } skiplist_t;
-  Write a function that searches for a value in a sorted skip list of integers.
+```
 
-Prototype : skiplist_t *linear_skip(skiplist_t *list, int value);
-Where list is a pointer to the head of the skip list to search in
-A node of the express lane is placed every index which is a multiple of the square root of the size of the list (see example below)
-And value is the value to search for
-You can assume that list will be sorted in ascending order
-Your function must return a pointer on the first node where value is located
-If value is not present in list or if head is NULL, your function must return NULL
-Every time you compare a value in the list to the value you are searching, you have to print this value (see example below)
-NOTE: You can find here the functions used in the example. You don’t need to push them, we will compile your file with our own implementation during the correction.
+Write a function that searches for a value in a sorted skip list of integers.
 
+- Prototype : `skiplist_t *linear_skip(skiplist_t *list, int value);`
+- Where `list` is a pointer to the head of the skip list to search in
+- A node of the express lane is placed every index which is a multiple of the square root of the size of the list (see example below)
+- And `value` is the value to search for
+- You can assume that `list` will be sorted in ascending order
+- Your function must return a pointer on the first node where `value` is located
+- If `value` is not present in `list` or if `head` is `NULL`, your function must return `NULL`
+- Every time you compare a value in the list to the value you are searching, you have to print this value (see example below)
+
+NOTE: [You can find here](https://intranet.alxswe.com/rltoken/Br9jXygWf5gbgGxZI45ukA) the functions used in the example. You don’t need to push them, we will compile your file with our own implementation during the correction.
+
+```Bash
 wilfried@0x1E-search_algorithms$ cat 106-main.c
 #include <stdio.h>
 #include <stdlib.h>
@@ -773,28 +800,30 @@ Value checked at index [13] = [62]
 Value checked at index [14] = [76]
 Value checked at index [15] = [99]
 Found 999 at index: (nil)
-**Repo:**
-
-- GitHub repository: `alx-low_level_programming`
-- Directory: `0x1E-search_algorithms`
-- File: `106-linear_skip.c
-
-14. Big O #6
-    #advanced
-    What is the time complexity (average case) of a jump search in a singly linked list of size n, using step = sqrt(n)?
+```
 
 **Repo:**
 
 - GitHub repository: `alx-low_level_programming`
 - Directory: `0x1E-search_algorithms`
-- File: `107-O
+- File: `106-linear_skip.c`
 
-15. Big O #7
-    #advanced
-    What is the time complexity (average case) of a jump search in a skip list of size n, with an express lane using step = sqrt(n)?
+### 14. Big O #6 (#advanced)
+
+What is the time complexity (average case) of a jump search in a singly linked list of size n, using step = sqrt(n)?
 
 **Repo:**
 
 - GitHub repository: `alx-low_level_programming`
 - Directory: `0x1E-search_algorithms`
-- File: `108-O
+- File: `107-O`
+
+### 15. Big O #7 (#advanced)
+
+What is the `time complexity` (average case) of a jump search in a skip list of size `n`, with an express lane using `step = sqrt(n)`?
+
+**Repo:**
+
+- GitHub repository: `alx-low_level_programming`
+- Directory: `0x1E-search_algorithms`
+- File: `108-O`
