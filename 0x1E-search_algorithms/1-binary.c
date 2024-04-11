@@ -33,7 +33,7 @@ void print_array(int *array, int size)
  * @size: size of the array (number of elements)
  * @value: value to be searched for
  *
- * Return: index position of value or -1 if not found or an empty array otherwise
+ * Return: index position of value or -1,or an empty array
  */
 int binary_search(int *array, size_t size, int value)
 {
